@@ -13,3 +13,8 @@ services:
 
     lightsaml_sp.token_factory:
         class: LightSaml\SpBundle\Security\Authentication\Token\SamlSpTokenFactory
+
+    LightSaml\SpBundle\Controller\DefaultController:
+        class: LightSaml\SpBundle\Controller\DefaultController
+        autowire: true
+        tags: [ 'controller.service_arguments' ]
